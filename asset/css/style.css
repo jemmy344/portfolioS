@@ -1,0 +1,142 @@
+@media (min-width: 40rem) { /* Breakpoint Tablet portrait up */
+	.layout {
+		grid-template-areas:
+			"header header header"
+			"sidebar main sidebar-right"
+			"footer footer footer";
+		grid-template-rows: auto 1fr auto;
+		grid-template-columns: 20% 1fr 20%;
+	}
+}
+
+:root {
+  --white: #ffffff;
+  --dark: #19313d;
+  --dark2: black;
+  --light: #fff;
+  --light2: aquamarine;
+
+  --border-radius: 50px;
+  
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: var(--dark);
+}
+
+li {
+  float: right;
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+li a {
+  display: block;
+  color: var(--light2);
+  text-align: center;
+  padding: 14px 16px;
+}
+
+li a:hover:not(.active) {
+  background-color: var(--dark2);
+}
+
+.active {
+  background-color: var(--light2);
+  color: var(--dark);
+}
+
+ul .box-sizing {
+  float: left;
+}
+
+.hero-banner {
+  width: auto;
+  height: 100px;
+  padding: 50px;
+  border: 1px solid var(--dark2);
+}
+
+.hero-banner h2 {
+  background-color: var(--light2);
+  width: 200px;
+  height: 20px;
+  padding: 10px;
+  margin: 0;
+  float: right;
+}
+
+h2 {
+  color: var(--dark);
+}
+
+#para {
+  color: var(--dark2);
+  border: 2px solid var(--light2);
+  padding: 20px;
+}
+
+.grid-container {
+  display:grid;
+  grid-template-columns: 25% 75%;
+  background-color: var(--light);
+  padding: 10px;
+}
+
+.grid-item {
+  background-color: var(--light);
+  border: 1px;
+  padding: 20px; 
+  text-align: right;
+}
+
+#categoryGrid {
+  margin: 0px 5%;
+  display: grid;
+  grid-template-rows: 300px 300px 300px;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-areas:
+  "portfolio portfolio portfolio portfolio"
+  "calculator calculator run-buddy run-buddy"
+  "puzzel puzzel led-wall led-wall"
+  ;
+}
+
+#portfolio {
+  grid-area: portfolio;
+  background-image: url("../images/02-portfolio-2.jpg");
+}
+
+#calculator {
+  grid-area: calculator;
+  background-image: url("../images/02-portfolio-3.jpg");
+}
+
+#run-buddy {
+  grid-area: run-buddy;
+  background-image: url("../images/02-portfolio-4.jpg");
+}
+
+#puzzel {
+  grid-area: puzzel;
+  background-image: url("../images/02-portfolio-4.jpg");
+}
+
+#led-wall {
+  grid-area: led-wall;
+  background-image: url("../images/02-portfolio-1.jpg");
+}
+
+.categoryGridArea {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 5px;
+  cursor: pointer;
+  display: grid;
+  align-content: end;
+}
